@@ -40,9 +40,13 @@ const AddProduct = () => {
 
     try {
       await axios
-        .post("http://localhost:8080/api/product", productData, {
-          headers: { "Content-Type": "multipart/form-data" },
-        })
+        .post(
+          "https://realestatebackend-production-e708.up.railway.app/api/product",
+          productData,
+          {
+            headers: { "Content-Type": "multipart/form-data" },
+          }
+        )
         .then((response) => {
           alert("Product added successfully!");
           console.log("Product added successfully!", response.data);

@@ -23,7 +23,7 @@ const TestCard = () => {
           data.map(async (product) => {
             try {
               const response = await axios.get(
-                `http://localhost:8080/api/product/${product.productId}/image`,
+                `https://realestatebackend-production-e708.up.railway.app/api/product/${product.productId}/image`,
                 { responseType: "blob" }
               );
               const imageUrl = URL.createObjectURL(response.data);

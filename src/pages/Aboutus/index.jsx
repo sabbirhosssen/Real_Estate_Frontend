@@ -18,8 +18,8 @@ const Aboutus = () => {
           />
           <div className="w-full md:w-1/2">
             <h3 className="text-lg md:text-xl font-semibold mb-4">
-              Welcome to [website name], your one-stop destination for all
-              things home improvement.
+              Welcome to Notation Real Estate LTD, your one-stop destination for
+              all things home improvement.
             </h3>
             <p className="text-sm md:text-base leading-relaxed">
               From remodeling and new home construction to home studios and shed
@@ -34,8 +34,8 @@ const Aboutus = () => {
         <div className="flex flex-col-reverse md:flex-row items-center gap-8 mb-12">
           <div className="w-full md:w-1/2">
             <h3 className="text-lg md:text-xl font-semibold mb-4">
-              Welcome to [website name], your one-stop destination for all
-              things home improvement.
+              Welcome to Notation Real Estate LTD, your one-stop destination for
+              all things home improvement.
             </h3>
             <p className="text-sm md:text-base leading-relaxed">
               From remodeling and new home construction to home studios and shed

@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const [emailData, setEmailData] = useState({ subscribeEmail: "" });
@@ -30,7 +31,10 @@ const Footer = () => {
       // setStatus("Subscribed successfully!");
       // setEmail({ email: "" });
 
-      await axios.post("http://localhost:8080/api/subscribe", emailData);
+      await axios.post(
+        "https://realestatebackend-production-e708.up.railway.app/api/subscribe",
+        emailData
+      );
 
       // Update the endpoint as needed
       setResponseMessage("Contact submitted successfully!");
@@ -122,8 +126,14 @@ const Footer = () => {
               </div>
 
               <div className="space-y-2 text-sm">
+                <Link
+                  to="/dashboard"
+                  className="bg-black text-white  my-2 rounded-md hover:bg-gray-800 transition"
+                >
+                  Dashboard
+                </Link>
                 <p>Our Services</p>
-                <p>Our Reviews</p>
+
                 <p>Our Team</p>
                 <p>Pricing</p>
                 <p>Benefits</p>

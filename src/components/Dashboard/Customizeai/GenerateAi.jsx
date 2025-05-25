@@ -40,7 +40,7 @@ const GenerateAi = () => {
       );
 
       const res = await axios.post(
-        "http://localhost:8080/ai/uploadimage",
+        "https://realestatebackend-production-e708.up.railway.app/ai/uploadimage",
         generatingData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );
@@ -51,7 +51,7 @@ const GenerateAi = () => {
 
       // Step 2: Fetch image from Spring Boot
       const imageRes = await axios.get(
-        `http://localhost:8080/ai/getloadimage/${generateId}`,
+        `https://realestatebackend-production-e708.up.railway.app/ai/getloadimage/${generateId}`,
         { responseType: "blob" }
       );
 
@@ -88,69 +88,14 @@ const GenerateAi = () => {
     });
   };
 
-  // const handleGenerate = async (e) => {
-  //   e.preventDefault();
-  //   if (!image || !prompt) {
-  //     alert("Please provide both image and prompt.");
-  //     return;
-  //   }
-
-  //   setLoading(true);
-  //   setOutputs([]);
-
-  //   try {
-  //     const generatingData = new FormData();
-  //     generatingData.append("imageFile", image);
-  //     generatingData.append(
-  //       "generateAi",
-  //       new Blob([JSON.stringify(prompt)], { type: "application/json" })
-  //     );
-  //     const res = await axios.post(
-  //       "http://localhost:8080/ai/uploadimage",
-  //       generatingData,
-  //       {
-  //         headers: { "Content-Type": "multipart/form-data" },
-  //       }
-  //     );
-  //     const generateId = res?.data?.generate_id;
-  //     const loadedPrompt = res?.data?.prompt;
-  //     console.log("Uploaded. ID:", generateId);
-
-  //     //✅ Step 2: Fetch back from Spring Boot
-
-  //     setTimeout(async () => {
-  //       try {
-  //         const imageRes = await axios.get(
-  //           `http://localhost:8080/ai/getloadimage/${generateId}`,
-  //           { responseType: "blob" }
-  //         );
-  //         const imageBlobUrl = URL.createObjectURL(imageRes.data);
-  //         setGeneratedImageUrl(imageBlobUrl);
-  //       } catch (err) {
-  //         console.error("Error fetching image:", err);
-  //       }
-  //     }, 500);
-  //     setTimeout(async () => {
-  //       // ✅ Step 3: Send to Flask AI generator
-  //       const reses = await axios.post("http://localhost:5000/generate", {
-  //         prompt: loadedPrompt,
-  //         image: loadedImage,
-  //         count: 1,
-  //       });
-  //       setOutputs(reses.data.outputs);
-  //     }, 3000);
-  //   } catch (err) {
-  //     console.error("Failed:", err);
-  //     alert("Something went wrong. Check your backend.");
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  // };
-
   return (
     <>
       <div className="p-6 max-w-xl mx-auto">
         <h1 className="text-2xl font-bold mb-4">AI Room Designer</h1>
+        <div className="text-lg text-red-400 font-bold mb-4">
+          <span className="text-red-700">NOTE: </span> This service only allow
+          to local machine.
+        </div>
 
         <input
           type="file"

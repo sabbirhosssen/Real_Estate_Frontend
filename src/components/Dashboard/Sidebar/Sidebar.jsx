@@ -10,15 +10,16 @@ const Sidebar = () => {
         </div>
         <ul>
           <li>
-            <Link to="generateai" className="block py-2">
-              Customize now
-            </Link>
-          </li>
-          <li>
             <Link to="/dashboard" className="block py-2">
               Dashboard
             </Link>
           </li>
+          <li>
+            <Link to="generateai" className="block py-2">
+              Customize now
+            </Link>
+          </li>
+
           <li>
             <Link to="settings" className="block py-2">
               Settings
@@ -34,7 +35,7 @@ const Sidebar = () => {
 
       <div className=" fixed bottom-0 right-0 ">
         <a
-          href="https://wa.me/15551234567"
+          href="https://wa.me/+8801608147170"
           target="_blank"
           rel="noopener noreferrer"
         >

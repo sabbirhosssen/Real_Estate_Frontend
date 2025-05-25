@@ -4,7 +4,7 @@ import axios from "axios";
 export const fetchProduct = createAsyncThunk("fetchProduct", async () => {
     
     try {
-        const result = await axios.get("http://localhost:8080/api/products");
+        const result = await axios.get("https://realestatebackend-production-e708.up.railway.app/api/products");
         // const result = await res.json();
         // console.log(result.data);
         return result.data;   

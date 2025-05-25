@@ -42,7 +42,10 @@ const Contacts = () => {
       //   "http://localhost:8080/api/contact",
       //   formData
       // );
-      await axios.post("http://localhost:8080/api/contact", formData);
+      await axios.post(
+        "https://realestatebackend-production-e708.up.railway.app/api/contact",
+        formData
+      );
 
       // Update the endpoint as needed
       setResponseMessage("Contact submitted successfully!");

@@ -31,7 +31,7 @@ const BookingApartment = () => {
           </div>
 
           {/* Info Section */}
-          <div>
+          <div className="mb-8">
             <h1 className="text-3xl font-bold mb-3 text-red-600">
               {productName}
             </h1>
@@ -66,12 +66,21 @@ const BookingApartment = () => {
                 )}
               </li>
             </ul>
-            <div className="textcenter text-red-400">
+            <div className="textcenter pb-4 text-red-400">
               <span className="text-red-900"> Note:</span> Please contact Our
               whatsapp number, visit site and agrement to apartment buy
             </div>
-            <a
-              href="https://wa.me/15551234567"
+            {/* <a
+              href="https://wa.me/01608147170"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="bg-green-500 text-white m-2 p-3 rounded-full  hover:bg-green-600 flex items-center gap-2">
+                <FaWhatsapp className="h-12 w-12" />
+              </button>
+            </a> */}
+            {/* <a
+              href="https://wa.me/01608147170"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -86,7 +95,7 @@ const BookingApartment = () => {
               >
                 {productAvailable ? "Discus now " : "Not Available"}
               </button>
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
